@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="193.7782mm"
+   height="40.102505mm"
+   viewBox="0 0 193.7782 40.102505"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="API_call_anatomy.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.5518659"
+     inkscape:cx="298.99491"
+     inkscape:cy="160.12982"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-19.412142,-70.000002)">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="19.412142"
+       y="88.500618"
+       id="text1310"><tspan
+         sodipodi:role="line"
+         id="tspan1308"
+         style="stroke-width:0.264583"
+         x="19.412142"
+         y="88.500618">curl --request GET '<tspan
+   style="fill:#3737c8"
+   id="tspan17196">https://api.twitter.com/2/</tspan><tspan
+   style="fill:#ff0000;fill-opacity:1"
+   id="tspan32922">t</tspan><tspan
+   style="fill:#ff0000"
+   id="tspan29172">weets/counts/recent</tspan><tspan
+   style="fill:#217844"
+   id="tspan37400">?query=from:joebiden&amp;granularity=day</tspan>' </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="19.412142"
+         y="93.792282"
+         id="tspan6856">       --header '<tspan
+   style="fill:#ff9955"
+   id="tspan42626">Authorization: Bearer 'XXX</tspan><tspan
+   id="tspan52630"
+   style="fill:#241c1c">'</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="64.921646"
+       y="73.067513"
+       id="text21136"><tspan
+         sodipodi:role="line"
+         id="tspan21134"
+         style="fill:#3737c8;fill-opacity:1;stroke-width:0.264583"
+         x="64.921646"
+         y="73.067513">base API URL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+       x="103.06567"
+       y="73.067513"
+       id="text31044"><tspan
+         sodipodi:role="line"
+         id="tspan31042"
+         style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+         x="103.06567"
+         y="73.067513">resource / endpoint</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;fill:#217844;fill-opacity:1;stroke-width:0.264583"
+       x="162.3354"
+       y="73.067513"
+       id="text39272"><tspan
+         sodipodi:role="line"
+         id="tspan39270"
+         style="fill:#217844;fill-opacity:1;stroke-width:0.264583"
+         x="162.3354"
+         y="73.067513">search query</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;fill:#ff9955;fill-opacity:1;stroke-width:0.264583"
+       x="64.433044"
+       y="109.22401"
+       id="text43040"><tspan
+         sodipodi:role="line"
+         id="tspan43038"
+         style="fill:#ff9955;fill-opacity:1;stroke-width:0.264583"
+         x="64.433044"
+         y="109.22401">API key</tspan></text>
+  </g>
+</svg>
