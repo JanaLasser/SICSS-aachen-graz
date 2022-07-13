@@ -8,7 +8,8 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 * Exercise: “Using digital trace data to answer social science questions”
 
 ### Day 2
-* [Lecture](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/slides/index.html) by Jana Lasser: “Harnessing web scraping and APIs to collect data”
+* [Lecture](https://JanaLasser.github.io/SICSS-aachen-graz/APIs/slides/index.html) by Jana Lasser: “Harnessing web scraping and APIs to collect data”
+
 * [Exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_exericses.ipynb): “Using different APIs to collect data”
 * API access [code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_access_code_snippets.ipynb)
 * Guest lecture by Anna Di Natale: “How to use Amazon Mechanical Turk
