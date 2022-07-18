@@ -1,0 +1,343 @@
+<!doctype html>
+
+<html>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script>
+	  Reveal.initialize({
+	    plugins: [ RevealMarkdown ]
+	  });
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai-sublime.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p style="font-size: 70px;">Harnessing APIs and web scraping to collect data</p>
+				</section>
+
+				<section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 50px; padding-bottom: 15px;">What is an API?</p>
+						<img src="img/API_1.svg", width="1100" style="padding-top: 0px; margin-top:0px">
+						<p style="font-size: 35px; padding-bottom:0px; margin-bottom:30px">"API" stands for <em>application programming interface</em>.</p>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 50px; padding-bottom: 15px;">What is an API?</p>
+						<img src="img/API_2.svg", width="1100" style="padding-top: 0px; margin-top:0px">
+						<p style="font-size: 35px; padding-bottom:0px; margin-bottom:30px">"API" stands for <em>application programming interface</em>.</p>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 50px; padding-bottom: 15px;">What is an API?</p>
+						<img src="img/API_3.svg", width="1100" style="padding-top: 0px; margin-top:0px">
+						<p style="font-size: 35px; padding-bottom:0px; margin-bottom:30px">"API" stands for <em>application programming interface</em>.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Interacting with APIs</p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:30px">The REST API</p>
+						<p style="font-size: 35px; padding-bottom:30px"><em>REST stands for "representational state transfer".<br> It defines a number of architectural constraints of the API.</em></p>
+						<li style="font-size: 30px; text-align:left; padding-bottom:50px">REST APIs operate in a client-server architecture with clients, servers and <em>resources</em>.</li>
+						<li style="font-size: 30px; text-align:left; padding-bottom:50px">Requests and responses between clients and servers are transferred via the <em>HTTP</em> protocol.</li>
+						<li style="font-size: 30px; text-align:left; padding-bottom:60px">REST APIs are <em>stateless</em>: no client information is stored by the server.</li>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:30px">Endpoints</p>
+						<p style="font-size: 35px; text-align:left"><em>An API endpoint is the end of your communication channel to the API. An API can have different endpoints for channels leading to different resources.</em></p>
+						<p style="font-size: 35px; text-align:left">Example: <a href="https://developer.nytimes.com/">New York Times API</a></p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px">(-) <b>/archive</b>: get NYT article metadata for a given month.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px">(-) <b>/search</b>: search for NYT articles with filters.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px;">(-) <b>/books</b>: Get the NYT best sellers list and lookup book reviews.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px">(-) <b>/mostpolular</b>: Get popular articles on NYTimes.com.</p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:100px">Anatomy of a request</p>
+						<img src="img/API_call_anatomy.svg", width="1100" style="padding-top: 0px; margin-top:0px">
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:0px">Anatomy of a response</p>
+						<p style="font-size: 35px;"><em>Very often API responses are formatted as JSON objects.</em></p>
+						<pre><code data-trim data-noescape data-line-numbers="1,15|2|3-14|4-8" style="font-size: 20px;">
+						{
+							"data":
+							[
+								{
+									"end":"2022-07-01T00:00:00.000Z",
+									"start":"2022-06-30T15:04:14.000Z",
+									"tweet_count":2
+								},
+								{
+									"end":"2022-07-02T00:00:00.000Z",
+									"start":"2022-07-01T00:00:00.000Z",
+									"tweet_count":2
+								}
+							]
+						}
+					</code></pre>
+					</section>
+					<section>
+						<p style="font-size: 50px; padding-bottom:0px; margin-bottom:10px">Wrappers</p>
+						<p style="font-size: 35px; text-align:left"><em>Writing requests manually is tedious. Wrappers add a layer of abstraction that makes this job easier for us.</em></p>
+						
+						<pre><code data-trim data-noescape data-line-numbers="1|2|4|6-7|9-13">
+						# Example: interacting with the Twitter API through twarc	
+						from twarc import Twarc2 
+
+						twarc_client = Twarc2(bearer_token = "XXX") 
+
+						granularity = "day"
+						query = "from:joebiden"
+
+						day_count = []
+						for count in twarc_client.counts_recent(
+					        query,
+					        granularity = granularity):
+					    day_count.extend(count["data"])
+						</code></pre>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:30px">Rate limits & quotas</p>
+						<p style="font-size: 35px; text-align:left"><em>Rate limiting is a strategy for limiting network traffic. It puts a cap on how often we can send requests to an API before being temporarily blocked.</em></p>
+						<p style="font-size: 35px; text-align:left"><em>Quotas limit how much data you can download in a given time frame.</em></p>
+						<p style="font-size: 35px; text-align:left">Example: <a href="https://developer.twitter.com/en/docs/twitter-api/rate-limits">Twitter v2 API academic-level access</a></p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px">(-) Full-archive tweet search: 300 requests / 15 min & 1 request / second</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px">(-) Quota: 10 mio tweets / month</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px">(-) Follower lookup: 15 requests / 15 min</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">API tour-de-force</p>
+						<p style="font-size: 40px;">See also the API access <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/API_access_code_snippets.ipynb">code snippets</a></p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Google Trends API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Search trends for a search query, time range and country, normalized to the maximum search volume in the given time range.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Was used a lot during the early times of CSS, hard to quality control. Can serve as a first indicator if something interesting is going on.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Very easy to use, no authentification required.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.sciencedirect.com/science/article/pii/S0749379714002384">What Can Digital Disease Detection Learn from (an External Revision to) Google Flu Trends?</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Twitter v2 API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Historic tweets back to 2010 and in real time, highly developed query language, followers, full conversation trees, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful, allthough a bit overused because of the very good accessibility & data quality. A LOT of CSS publications use Twitter data.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Academic access requires an application process. Very good <a href="https://developer.twitter.com/en/docs/twitter-api">documentation</a>, well-maintained <a href="https://twarc-project.readthedocs.io/en/latest/api/client2/">Python wrapper</a>, restrictive rate-limits & monthly quota require some planning for data retrieval.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://journals.sagepub.com/doi/full/10.1177/0956797619831964">Collective Emotions and Social Resilience in the Digital Traces After a Terrorist Attack</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The PushShift API and Reddit data</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Complete history of submissions, comments, scores.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful, subreddits are a nice way to retrieve topic-specific text, used in many CSS research projects.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No application process, rather restrictive rate limit of 1 request / second, good <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/7347"> data set descriptors</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.jmir.org/2021/1/e21212/">Patterns of Routes of Administration and Drug Tampering for Nonmedical Opioid Consumption: Data Mining and Content Analysis of Reddit Discussions</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Telegram API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Messages & media in a given channel, channel members.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful to get data from fringe-groups that are not represented on big social media platforms. Severly underused in CSS research.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Clunky authentification process, lacking documentation, python wrapper not really designed for data collection.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.tandfonline.com/doi/abs/10.1080/1369118X.2020.1803946">What they do in the shadows: examining the far-right networks on Telegram</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The MediaWiki API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Gateway to Wipipedia and Wikimedia Commons content. Access wikipedia articles, article discussions & revision histories, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful to research public knowledge creation, knowledge structure, volunteer interactions in a large organisation, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification needed, good documentation, large number of endpoints and search options, good python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.nature.com/articles/s41598-021-00789-3#Sec11">Volunteer contributions to Wikipedia increased during COVID-19 mobility restrictions</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The New York Times API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Article abstracts and metadata, <b>not</b> full article texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Somewhat limited because full texts are missing, but abstracts can serve as a window into histporic high-quality journalistic texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification, good documentation, nice python wrapper, hard to get article texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.pnas.org/doi/epdf/10.1073/pnas.2107848118">The rise and fall of rationality in language</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Steam reviews & comments</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Reviews & comments to reviews of games on Steam.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Niche usefulness to investigate gamers, some comment threads are used as chats. Underused data source.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification, sparse documentation, OK python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="http://www.ijimt.org/vol8/709-EM0023.pdf">A Study of Analyzing on Online Game Reviews using a Data Mining Approach: STEAM Community Data</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Open Street Maps</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Map data (nodes, ways, relations), alternative to Google maps.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful for research that needs location data. HUGE amounts of available data. Data availability can be biased, due to volunteer activity.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification required, very powerful API & query language with a steep learning curve. For big data queries, use <a href="http://overpass-api.de/command_line.html">command-line tools</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://ieeexplore.ieee.org/abstract/document/9242771">Generating Open-Source Datasets for Power Distribution Network Using OpenStreetMaps</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">CrossRef</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Article titles, authors, journals, number of references.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Useful for scientometrics research, alternative to <a href="https://link.springer.com/article/10.1007/s11192-020-03690-4">costly closed services</a> such as Web of Science.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification required, slow and a bit unstable data retrieval (?), OK python wrapper, good <a href="https://direct.mit.edu/qss/article/1/1/414/15577/Crossref-The-sustainable-source-of-community-owned">dataset descriptor</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://ieeexplore.ieee.org/abstract/document/9319154">Citation Intent Classification Using Word Embedding</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Spotify</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Metadata about artists, playlists & tracks, song features like "danceability".</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Useful to research characteristics and popularity of songs, song features are "black boxes" - hard to validate.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification via Spotify account, somewhat clunky to use because there is no query language and artist / playlist / track URIs are needed to get data, good Python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.nature.com/articles/s41599-021-00855-1.epdf">Cultural Divergence in popular music: the increasing diversity of music consumption on Spotify across countries</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Facebook & Instagram</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><a href="https://www.crowdtangle.com/">CrowdTangle</a> (API <a href="https://help.crowdtangle.com/en/articles/1189612-crowdtangle-api">documentation</a>)</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Web scraping<br>- what to do if there is no API -</p>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 50px; padding-bottom: 15px;">What is webscraping?</p>
+						<img src="img/webscraping_2.svg", width="1000" style="padding-top: 0px; margin-top:0px; padding-bottom:0px; margin-bottom: 0px;">
+						<p style="font-size: 14px; text-align: left; margin-bottom:0px; padding-bottom:0px; margin-top:0px; padding-top:0px; padding-left:250px"><a href="https://en.wikipedia.org/wiki/List_of_United_States_presidential_elections_by_popular_vote_margin">List of United States presidential Elections</a> <span style="padding-left: 350px;">page source</span></p>
+						<p style="font-size: 35px; padding-bottom:0px; margin-bottom:30px">Getting information from webpages.</p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:30px">How does it work?</p>
+						<p style="font-size: 35px; text-align:left;  padding-bottom:50px"> Write code that sends a request to the server hosting the web page of interest. In Python the "requests" package helps to send and receive requests.</p>
+						<pre><code data-trim data-noescape style="font-size: 20px; padding-bottom:30px">
+							import requests
+							page = "https://forecast.weather.gov/MapClick.php?lat=37.7772&lon=-122.4168"
+							page = requests.get(page)
+						</code></pre>
+					</section>				
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">How does it work?</p>
+						<p style="font-size: 35px; text-align:left;  padding-bottom:0px"> The server sends the source code of the webpage: (mostly) HTML. Web browsers <em>render</em> the HTML code to display a nice-looking website. Our code doesn't do that - we need to <em>parse</em> the information to identify elements of interest.</p>
+						<img src="img/requests_page_raw.png", width="850">
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:0px">How does it work?</p>
+						<p style="font-size: 35px; padding-bottom:0px">Enter: the Python package BeautifulSoup.</p>
+						<img src="img/requests_page_pretty.png", width="850">
+					</section>
+					
+					<section>
+						<p style="font-size: 60px; padding-bottom:0px; margin-bottom:10px">Finding useful information within the page</p>
+						<pre><code data-trim data-line-numbers="1-2|3|4-5|6" data-noescape style="font-size: 25px; padding-bottom:0px; padding-top:0px">
+							page = requests.get(page)
+							soup = BeautifulSoup(page.content, 'html.parser')
+							seven_day = soup.find(id="seven-day-forecast")
+							forecast_items = seven_day.find_all(class_="tombstone-container")
+							tonight = forecast_items[0]
+							print(tonight.prettify())
+						</code></pre>
+						<img src="img/tonight_pretty.png", width="850" class="fragment" data-framgment-index=4 style="padding-top: 0px; margin-top:0px">
+					</section>
+					<section>
+						<p style="font-size: 60px; padding-bottom:0px; margin-bottom:60px">Further reading</p>
+						<p style="font-size: 35px; text-align:left">Excellent <a href="https://www.dataquest.io/blog/web-scraping-python-using-beautiful-soup/">tutorial</a> for a workflow from HTML to pandas DataFrame.</p>
+						<p style="font-size: 35px; text-align:left">Web scraping <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/web_scraping_code_snippets.ipynb">code snippets</a>.</p>
+						<p style="font-size: 35px; text-align:left">API access <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/API_access_code_snippets.ipynb">code snippets</a>.</p>
+						<p style="font-size: 35px; text-align:left">Chris Bail's SICSS <a href="https://sicss.io/2020/materials/day2-digital-trace-data/apis/Rpres/APIs.html#/1">talk</a> on APIs (in R).</p>
+						<p style="font-size: 35px; text-align:left">Crowd-sourced <a href="https://sicss.io/2020/materials/day2-digital-trace-data/apis/Rpres/APIs.html#/1">list</a> of useful APIs.</p>
+					</section>
+				</section>
+				<section>
+					<p style="font-size: 60px; padding-bottom:0px; margin-bottom:30px">Summary</p>
+					<p style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">APIs provide a <em>structured</em> way of accessing data.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use a <em>wrapper</em> to access APIs from Python.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Pay attention to rate limits and quotas.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:60px; text-align:left; padding-left:60px">Plan your research given the specifics of an API.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">Web scraping gives you access to data when <em>no APIs are available</em>.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use requests to get the <em>HTML</em> of a webpage.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Check the contents of the page and HTML to identify the <em>tags</em> of the relevant information.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use BeautifulSoup to <em>parse</em> the HTML and access individual fields.</p>
+				</section>
+				<section>
+					<p style="font-size: 60px; padding-bottom:0px; margin-bottom:30px">Exercise</p>
+					<p style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">APIs provide a <em>structured</em> way of accessing data.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use a <em>wrapper</em> to access APIs from Python.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Pay attention to rate limits and quotas.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:60px; text-align:left; padding-left:60px">Plan your research given the specifics of an API.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">Web scraping gives you access to data when <em>no APIs are available</em>.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use requests to get the <em>HTML</em> of a webpage.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Check the contents of the page and HTML to identify the <em>tags</em> of the relevant information.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use BeautifulSoup to <em>parse</em> the HTML and access individual fields.</p>
+				</section>
+
+				
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200, //used to be 960
+  				height: 700,
+  				slideNumber: 'c',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<style type="text/css">
+		    /* 1. Style header/footer <div> so they are positioned as desired. */
+		    #header-left {
+		        position: absolute;
+		        top: 0%;
+		        left: 0%;
+		    }
+		    #header-right {
+		        position: absolute;
+		        top: 0%;
+		        right: 0%;
+		    }
+		    #footer-left {
+		        position: absolute;
+		        bottom: 0%;
+		        left: 0%;
+		    }
+		</style>
+
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+		    <div id="header">
+		        <div id="footer-left" style="font-size: 20px; padding-bottom:10px; padding-left:10px; color:#1a88a1">Jana Lasser &#8287&#8287&#8287 | &#8287&#8287&#8287 jana.lasser@tugraz.at &#8287&#8287&#8287 | &#8287&#8287&#8287 @janalasser</div>
+		    </div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+		    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		    var header = $('#header').html();
+		    if ( window.location.search.match( /print-pdf/gi ) ) {
+		        Reveal.addEventListener( 'ready', function( event ) {
+		            $('.slide-background').append(header);
+		        });
+		    }
+		    else {
+		        $('div.reveal').append(header);
+		   }
+		</script>
+	</body>
+</html>
+
