@@ -16,8 +16,7 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 ### Day 3
 * Guest lecture by David Garcia: “Combining surveys and big data”
 * Exercise: “Using transformer models to extract information from text and combine them with data from surveys”
-* Guest lecture by Markus Strohmaier “Introduction to networks in CSS”
-* [Exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/networks/exercise/networks_exercise.ipynb): “Analysis of retweet networks of Swiss politicians”
+* Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[Exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)]
 
 ### Day 4
 * Lecture by Ivan Smirnov: “How to write a (good!) CSS paper”
