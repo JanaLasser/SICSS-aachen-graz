@@ -3,7 +3,7 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 
 ## Course contents
 ### Day 1
-* Lecture by Ivan Smirnov: “What is computational social science (CSS) really?”
+* Lecture by Ivan Smirnov: “What is computational social science (CSS) really?” [[slides](https://docs.google.com/presentation/d/1lYYfzG-67kXKwakUuCO8UcNTUY-a2Q8g3Gh5Xfd1jRI/edit?usp=sharing)]
 * Lecture by Ivan Smirnov: “How digital trace data could help to answer social science questions?” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/01_02_digital_trace_data/exercise/gdp_foi_tutorial.ipynb)]
 
 ### Day 2
