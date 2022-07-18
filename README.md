@@ -33,3 +33,10 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 * Lecture by Jana Lasser: “Ethical dimensions of CSS research”
 * Project idea generation & group formation
 
+### Day 6
+
+### Day 7
+
+### Day 8
+* Lecture by Alina Arseniev-Koehler "Integrating Topic Modeling and Word Embedding to Characterize Violent Deaths" [[materials](https://github.com/arsena-k/discourse_atoms)], [[reading 1](https://www.pnas.org/doi/10.1073/pnas.2108801119)], [[reading 2](https://pubmed.ncbi.nlm.nih.gov/33984244/)].
+
