@@ -8,12 +8,10 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 * Exercise: “Using digital trace data to answer social science questions”
 
 ### Day 2
-* [Lecture](https://JanaLasser.github.io/SICSS-aachen-graz/APIs/slides/index.html) by Jana Lasser: “Harnessing web scraping and APIs to collect data”
+* Lecture by Jana Lasser: “Harnessing web scraping and APIs to collect data” [[slides](https://JanaLasser.github.io/SICSS-aachen-graz/02_01_APIs/slides/index.html)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_exericses.ipynb)] [[API access code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_access_code_snippets.ipynb)]
 
-* [Exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_exericses.ipynb): “Using different APIs to collect data”
-* API access [code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_access_code_snippets.ipynb)
-* Guest lecture by Anna Di Natale: “How to use Amazon Mechanical Turk
-* Exercise: “Using Amazon Mechanical Turk to collect data”
+* Guest lecture by Anna Di Natale: “How to use Amazon Mechanical Turk [[slides](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/SICCSS_MTurk_slides.pdf)] [[handout](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/MTurk_basics_handout.pdf)]
+
 * Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”
 
 ### Day 3
