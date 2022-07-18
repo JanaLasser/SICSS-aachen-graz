@@ -124,60 +124,81 @@
 				<section>
 					<section>
 						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">API tour-de-force</p>
+						<p style="font-size: 40px;">See also the API access <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/API_access_code_snippets.ipynb">code snippets</a></p>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">The Twitter v2 API</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Historic tweets back to 2010 and in real time, highly developed query language, followers, full conversation trees, ...</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Very useful, allthough a bit overused because of the very good accessibility & data quality. A LOT of CSS publications use Twitter data.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: Academic access requires an application process. Very good <a href="https://developer.twitter.com/en/docs/twitter-api">documentation</a>, well-maintained <a href="https://twarc-project.readthedocs.io/en/latest/api/client2/">Python wrapper</a>, restrictive rate-limits & monthly quota require some planning for data retrieval.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Google Trends API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Search trends for a search query, time range and country, normalized to the maximum search volume in the given time range.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Was used a lot during the early times of CSS, hard to quality control. Can serve as a first indicator if something interesting is going on.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Very easy to use, no authentification required.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.sciencedirect.com/science/article/pii/S0749379714002384">What Can Digital Disease Detection Learn from (an External Revision to) Google Flu Trends?</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">The PushShift API and Reddit data</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Submissions, comments & scores of subreddits or individual users.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Very useful, subreddits are a nice way to retrieve topic-specific text, used in many CSS research projects.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: No application process, rather restrictive rate limit of 1 request / second.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Twitter v2 API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Historic tweets back to 2010 and in real time, highly developed query language, followers, full conversation trees, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful, allthough a bit overused because of the very good accessibility & data quality. A LOT of CSS publications use Twitter data.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Academic access requires an application process. Very good <a href="https://developer.twitter.com/en/docs/twitter-api">documentation</a>, well-maintained <a href="https://twarc-project.readthedocs.io/en/latest/api/client2/">Python wrapper</a>, restrictive rate-limits & monthly quota require some planning for data retrieval.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://journals.sagepub.com/doi/full/10.1177/0956797619831964">Collective Emotions and Social Resilience in the Digital Traces After a Terrorist Attack</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">The Telegram API</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Messages & media in a given channel, channel members.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Very useful to get data from fringe-groups that are not represented on big social media platforms. Severly underused in CSS research.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: Clunky authentification process, lacking documentation, python wrapper not really designed for data collection.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The PushShift API and Reddit data</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Complete history of submissions, comments, scores.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful, subreddits are a nice way to retrieve topic-specific text, used in many CSS research projects.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No application process, rather restrictive rate limit of 1 request / second, good <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/7347"> data set descriptors</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.jmir.org/2021/1/e21212/">Patterns of Routes of Administration and Drug Tampering for Nonmedical Opioid Consumption: Data Mining and Content Analysis of Reddit Discussions</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">The MediaWiki API</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Gateway to Wipipedia and Wikimedia Commons content. Access wikipedia articles, article discussions & revision histories, ...</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Very useful to research public knowledge creation, knowledge structure, volunteer interactions in a large organisation, ...</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: No authentification needed, good documentation, large number of endpoints and search options, good python wrapper.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The Telegram API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Messages & media in a given channel, channel members.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful to get data from fringe-groups that are not represented on big social media platforms. Severly underused in CSS research.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Clunky authentification process, lacking documentation, python wrapper not really designed for data collection.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.tandfonline.com/doi/abs/10.1080/1369118X.2020.1803946">What they do in the shadows: examining the far-right networks on Telegram</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">The New York Times API</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Article abstracts and metadata, <b>not</b> full article texts.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Somewhat limited because full texts are missing, but abstracts can serve as a window into histporic high-quality journalistic texts.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: Easy authentification, good documentation, nice python wrapper.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The MediaWiki API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Gateway to Wipipedia and Wikimedia Commons content. Access wikipedia articles, article discussions & revision histories, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful to research public knowledge creation, knowledge structure, volunteer interactions in a large organisation, ...</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification needed, good documentation, large number of endpoints and search options, good python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.nature.com/articles/s41598-021-00789-3#Sec11">Volunteer contributions to Wikipedia increased during COVID-19 mobility restrictions</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Steam reviews & comments</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Reviews & comments to reviews of games on Steam.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Niche usefulness to investigate gamers, some comment threads are used as chats. Underused data source.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: Easy authentification, sparse documentation, OK python wrapper.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">The New York Times API</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Article abstracts and metadata, <b>not</b> full article texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Somewhat limited because full texts are missing, but abstracts can serve as a window into histporic high-quality journalistic texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification, good documentation, nice python wrapper, hard to get article texts.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.pnas.org/doi/epdf/10.1073/pnas.2107848118">The rise and fall of rationality in language</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Open Street Maps</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Map data (nodes, ways, relations), alternative to Google maps.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Very useful for research that needs location data. HUGE amounts of available data. Data availability can be biased, due to volunteer activity.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: No authentification required, very powerful API & query language with a steep learning curve. For big data queries, use command-line tools.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Steam reviews & comments</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Reviews & comments to reviews of games on Steam.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Niche usefulness to investigate gamers, some comment threads are used as chats. Underused data source.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification, sparse documentation, OK python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="http://www.ijimt.org/vol8/709-EM0023.pdf">A Study of Analyzing on Online Game Reviews using a Data Mining Approach: STEAM Community Data</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">CrossRef</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Article titles, authors, journals, number of references.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Useful for scientometrics research, alternative to costly closed services such as Web of Science.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: No authentification required, slow and a bit unstable data retrieval (?), OK python wrapper.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Open Street Maps</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Map data (nodes, ways, relations), alternative to Google maps.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Very useful for research that needs location data. HUGE amounts of available data. Data availability can be biased, due to volunteer activity.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification required, very powerful API & query language with a steep learning curve. For big data queries, use <a href="http://overpass-api.de/command_line.html">command-line tools</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://ieeexplore.ieee.org/abstract/document/9242771">Generating Open-Source Datasets for Power Distribution Network Using OpenStreetMaps</a>
 					</section>
 					<section>
-						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Spotify</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>What do you get?</b> Metadata about artists, playlists & tracks.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Usefulness for CSS</b>: Useful to research characteristics and popularity of songs.</p>
-						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><b>Accessibility</b>: Easy authentification via Spotify account, somewhat clunky to use because there is no query language and artist / playlist / track URIs are needed to get data, good Python wrapper.</p>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">CrossRef</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Article titles, authors, journals, number of references.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Useful for scientometrics research, alternative to <a href="https://link.springer.com/article/10.1007/s11192-020-03690-4">costly closed services</a> such as Web of Science.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: No authentification required, slow and a bit unstable data retrieval (?), OK python wrapper, good <a href="https://direct.mit.edu/qss/article/1/1/414/15577/Crossref-The-sustainable-source-of-community-owned">dataset descriptor</a>.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://ieeexplore.ieee.org/abstract/document/9319154">Citation Intent Classification Using Word Embedding</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:10px">Spotify</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>What do you get?</b> Metadata about artists, playlists & tracks, song features like "danceability".</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Usefulness for CSS</b>: Useful to research characteristics and popularity of songs, song features are "black boxes" - hard to validate.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:20px"><b>Accessibility</b>: Easy authentification via Spotify account, somewhat clunky to use because there is no query language and artist / playlist / track URIs are needed to get data, good Python wrapper.</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:0px"><b>Example publication</b>: <a href="https://www.nature.com/articles/s41599-021-00855-1.epdf">Cultural Divergence in popular music: the increasing diversity of music consumption on Spotify across countries</a>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom:0px; margin-bottom:60px">Facebook & Instagram</p>
+						<p style="font-size: 35px; text-align:left; padding-left:50px; padding-bottom:50px"><a href="https://www.crowdtangle.com/">CrowdTangle</a> (API <a href="https://help.crowdtangle.com/en/articles/1189612-crowdtangle-api">documentation</a>)</p>
 					</section>
 				</section>
 
@@ -225,7 +246,11 @@
 					</section>
 					<section>
 						<p style="font-size: 60px; padding-bottom:0px; margin-bottom:60px">Further reading</p>
-						<p style="font-size: 35px; text-align:left">To get all the basics for a workflow from HTML to pandas DataFrame, I recommend this excellent <a href="https://www.dataquest.io/blog/web-scraping-python-using-beautiful-soup/">tutorial</a>.</p>
+						<p style="font-size: 35px; text-align:left">Excellent <a href="https://www.dataquest.io/blog/web-scraping-python-using-beautiful-soup/">tutorial</a> for a workflow from HTML to pandas DataFrame.</p>
+						<p style="font-size: 35px; text-align:left">Web scraping <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/web_scraping_code_snippets.ipynb">code snippets</a>.</p>
+						<p style="font-size: 35px; text-align:left">API access <a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_01_APIs/exercise/API_access_code_snippets.ipynb">code snippets</a>.</p>
+						<p style="font-size: 35px; text-align:left">Chris Bail's SICSS <a href="https://sicss.io/2020/materials/day2-digital-trace-data/apis/Rpres/APIs.html#/1">talk</a> on APIs (in R).</p>
+						<p style="font-size: 35px; text-align:left">Crowd-sourced <a href="https://sicss.io/2020/materials/day2-digital-trace-data/apis/Rpres/APIs.html#/1">list</a> of useful APIs.</p>
 					</section>
 				</section>
 				<section>
@@ -234,9 +259,21 @@
 					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use a <em>wrapper</em> to access APIs from Python.</p>
 					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Pay attention to rate limits and quotas.</p>
 					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:60px; text-align:left; padding-left:60px">Plan your research given the specifics of an API.</p>
-					<p class="fragment" data-fragment-index="1" style="font-size: 40px; padding-bottom:0px; margin-bottom:30px; text-align:left">Web scraping gives you access to data when no API is available.</p>
-					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Download raw HTML code & parse it with BeautifulSoup.</p>
-					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:60px; text-align:left; padding-left:60px">Inspect the HTML code to identify tags of interest and parse their information.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">Web scraping gives you access to data when <em>no APIs are available</em>.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use requests to get the <em>HTML</em> of a webpage.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Check the contents of the page and HTML to identify the <em>tags</em> of the relevant information.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use BeautifulSoup to <em>parse</em> the HTML and access individual fields.</p>
+				</section>
+				<section>
+					<p style="font-size: 60px; padding-bottom:0px; margin-bottom:30px">Exercise</p>
+					<p style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">APIs provide a <em>structured</em> way of accessing data.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use a <em>wrapper</em> to access APIs from Python.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Pay attention to rate limits and quotas.</p>
+					<p style="font-size: 30px; padding-bottom:0px; margin-bottom:60px; text-align:left; padding-left:60px">Plan your research given the specifics of an API.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 40px; padding-bottom:0px; margin-bottom:0px; text-align:left">Web scraping gives you access to data when <em>no APIs are available</em>.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use requests to get the <em>HTML</em> of a webpage.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:00px; text-align:left; padding-left:60px">Check the contents of the page and HTML to identify the <em>tags</em> of the relevant information.</p>
+					<p class="fragment" data-fragment-index="1" style="font-size: 30px; padding-bottom:0px; margin-bottom:0px; text-align:left; padding-left:60px">Use BeautifulSoup to <em>parse</em> the HTML and access individual fields.</p>
 				</section>
 
 				
