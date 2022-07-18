@@ -4,7 +4,7 @@ Welcome to the online materials for our Summer Institute for Computational Socia
 ## Course contents
 ### Day 1
 * Lecture by Ivan Smirnov: “What is computational social science (CSS) really?” [[slides](https://docs.google.com/presentation/d/1lYYfzG-67kXKwakUuCO8UcNTUY-a2Q8g3Gh5Xfd1jRI/edit?usp=sharing)]
-* Lecture by Ivan Smirnov: “How digital trace data could help to answer social science questions?” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/01_02_digital_trace_data/exercise/gdp_foi_tutorial.ipynb)]
+* Lecture by Ivan Smirnov: “How digital trace data could help to answer social science questions?” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/01_02_digital_trace_data/exercise/gdp_foi_tutorial.ipynb)] [[exercise introduction video](https://youtu.be/l3I468kdJoA)]
 
 ### Day 2
 * Lecture by Jana Lasser: “Harnessing web scraping and APIs to collect data” [[slides](https://janalasser.github.io/SICSS-aachen-graz/02_01_APIs/slides/index.html#1)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_exericses.ipynb)] [[API access code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/APIs/exercise/API_access_code_snippets.ipynb)]
