@@ -13,7 +13,7 @@ https://youtu.be/jdUrOJbYhCw)] [[exercise](https://github.com/JanaLasser/SICSS-a
 * Guest lecture by Anna Di Natale: “How to use Amazon Mechanical Turk [[slides](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/SICCSS_MTurk_slides.pdf)] [[handout](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/MTurk_basics_handout.pdf)] [[lecture recording](
 https://youtu.be/Lv9DjfeacSM)]
 
-* Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”
+* POSTPONED: ~~Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”~~
 
 ### Day 3
 * Guest lecture by David Garcia: “Combining surveys and big data”
