@@ -16,7 +16,7 @@ https://youtu.be/Lv9DjfeacSM)]
 * POSTPONED: ~~Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”~~
 
 ### Day 3
-* Guest lecture by David Garcia: “Combining surveys and big data” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_01_big_data_and_surveys/exercise/hfhub_transformer_intro.ipynb)]
+* Guest lecture by David Garcia: “Combining surveys and big data” [[slides](https://dgarcia-eu.github.io/SICSS-2022/#1)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_01_big_data_and_surveys/exercise/hfhub_transformer_intro.ipynb)]
 * Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)]
 
 ### Day 4
