@@ -1,0 +1,999 @@
+<!doctype html>
+
+<html>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script>
+	  Reveal.initialize({
+	    plugins: [ RevealMarkdown ]
+	  });
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/stackoverflow-dark.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p style="font-size: 70px;">Visualize your data: DOs and DONT's</p>
+				</section>
+
+				<section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 80px;">Some design principles</p>
+					</section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 80px;">The Minard Map</p>
+						<div class="r-stack">
+							<img src="img/minard_map_1.svg" width=1200>
+							<img class="fragment" data-fragment-index="1" src="img/minard_map_2.svg" width=1200>
+							<img class="fragment" data-fragment-index="2" src="img/minard_map_3.svg" width=1200>
+							<img class="fragment" data-fragment-index="3" src="img/minard_map_4.svg" width=1200>
+							<img class="fragment" data-fragment-index="4" src="img/minard_map_5.svg" width=1200>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 80px;">Matplotlib & Seaborn</p>
+					</section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 80px;">Matplotlib</p>
+						<pre><code data-trim data-noescape style="font-size: 20px">
+						import matplotlib.pyplot as plt
+						fig = plt.figure()
+						</code></pre>
+						<img class="r-stretch" src="img/figure.svg">
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 80px;">Matplotlib</p>
+						<pre><code data-trim data-noescape style="font-size: 20px">
+						import matplotlib.pyplot as plt
+						fig, ax = plt.subplots()
+						</code></pre>
+						<img class="r-stretch" src="img/fig_and_axes.svg">
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 80px;">Matplotlib</p>
+						<pre><code data-trim data-noescape style="font-size: 20px">
+						import matplotlib.pyplot as plt
+						fig, axes = plt.subplots(1, 2, figsize=(12, 4))
+						</code></pre>
+						<img class="r-stretch" src="img/subplots.svg">
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 80px; padding-bottom: 0px; margin-bottom: 0px;">Matplotlib</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1.5fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="1-7" style="font-size: 20px">
+									import matplotlib.pyplot as plt
+									fig, axes = plt.subplots(1, 2, figsize=(4, 8))
+									x = [0.2, 0.6]
+									y = [0.4, 0.5]
+									axes[0].scatter(x, y, s=60)
+									axes[1].bar(x, y, width=0.1)
+								</code></pre>
+							</div>
+							<div>
+								<img src="img/artists_1.svg" height=550 style="margin-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 80px; padding-bottom: 0px; margin-bottom: 0px;">Matplotlib</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1.5fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 50px;"></p>
+
+								<pre><code data-trim data-noescape data-line-numbers="1-8|5|7-8" style="font-size: 20px">
+									import matplotlib.pyplot as plt
+									fig, axes = plt.subplots(1, 2, figsize=(4, 8))
+									x = [0.2, 0.6]
+									y = [0.4, 0.5]
+									axes[0].scatter(x, y, s=200, color="r")
+									axes[1].bar(x, y, width=0.1)
+									axes[1].set_xticks([])
+									axes[1].set_title("a barchart", fontsize=16)
+								</code></pre>
+								<p style="font-size: 35px; text-align: left;">Modify overall aesthetics in plot call.</p>
+								<p style="font-size: 35px; text-align: left;">Modify individual elements via <em>set_element(attribute)</em>.</p>
+							</div>
+							<div>
+								<img src="img/artists_3.svg" height=550 style="margin-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom: 0px; margin-bottom: 0px;">Seaborn</p>
+						<p style="font-size: 30px;"><em>A high-level interface to Matplotlib for statistical analyses. Get inspiredy by the <a href="https://seaborn.pydata.org/examples/index.html">gallery</a>.</em></p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="1-2|3-5|6-14|15" style="font-size: 14px">
+									import seaborn as sns
+									sns.set_theme(style = "whitegrid")
+									iris = sns.load_dataset("iris")
+									iris = pd.melt(iris, "species", var_name = "measurement")
+									fig, ax = plt.subplots()
+									sns.stripplot(
+										data = iris,
+										x = "value", 
+										y = "measurement",
+										hue = "species",
+										dodge = True,
+										alpha = .25,
+										ax = ax
+									)
+									ax.set_ylabel("")
+								</code></pre>
+							</div>
+							<div>
+								<p style="padding-top: 10px;"></p>
+								<img src="img/seaborn_demo.svg" width="600" style="margin-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom: 0px; margin-bottom: 0px;">Why Matplotlib?</p>
+						<p style="font-size: 40px;"><em>... Matplotlib is a pain in the ass to learn.</em></p>
+						<p class="fragment" data-fragment-index="0" style="text-align: left; font-size: 40px; padding-left: 50px; padding-bottom: 20px;">I know Matplotlib.</p>
+						<p class="fragment" data-fragment-index="0" style="text-align: left; font-size: 40px; padding-left: 50px; padding-bottom: 20px;">Great synergy with <em><a href="https://seaborn.pydata.org/index.html">seaborn</a></em>.</p>
+						<p class="fragment" data-fragment-index="1" style="text-align: left; font-size: 40px; padding-left: 50px; padding-bottom: 20px;">Other packages like <em><a href="https://networkx.org/documentation/stable/reference/drawing.html">networkx</a></em> build on it.</p>
+						<p class="fragment" data-fragment-index="2" style="text-align: left; font-size: 40px; padding-left: 50px; padding-bottom: 20px;">Matplotlib offers very fine control over all figure elements.</p>
+						<p class="fragment" data-fragment-index="3" style="text-align: left; font-size: 40px; padding-left: 50px; padding-bottom: 20px;">For publication-level plots it pays off to learn Matplotlib.</p>
+					</section>
+					<section>
+						<p style="font-size: 60px; padding-bottom: 30px; margin-bottom: 0px;">Overview: Python plotting packages</p>
+						<font size="5">
+							<table>
+						    	<thead><tr>
+						            <th>package</th>
+						            <th>style</th>
+						            <th>pro</th>
+						            <th>con</th>
+						        </tr></thead>
+						        <tbody>
+							      	<tr style="background-color:#d0d6d9">
+							            <td><a href="https://matplotlib.org/">matplotlib</a></td>
+							            <td>object oriented</td>
+							            <td>very customizable, many extensions</td>
+							            <td>very complex</td>
+							        </tr>
+							      	<tr style="background-color:#d0d6d9">
+							            <td><a href="https://seaborn.pydata.org/">seaborn</a></td>
+							            <td>declarative</td>
+							            <td>very sensible defaults, easy(er) to use</td>
+							            <td>less customizable, but can fall back to matplotlib</td>
+							        </tr>
+							      	<tr style="background-color:#d0d6d9">
+							            <td><a href="https://plotly.com/python/">plotly</a></td>
+							            <td>declarative</td>
+							            <td>easy to use, made for interactive visualizations, also available for R</td>
+							            <td>less customizable, getting used to web apps might take some getting used to</td>
+							        </tr>
+							      	<tr style="background-color:white">
+							            <td><a href="https://github.com/altair-viz/altair">altair</a></td>
+							            <td>declarative</td>
+							            <td>easy to use</td>
+							            <td>less customizable</td>
+							        </tr>
+							      	<tr style="background-color:white">
+							            <td><a href="http://docs.bokeh.org/en/latest/">bokeh</a></td>
+							            <td><a href="https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">grammar of graphics</a></td>
+							            <td>rather straight forward to use, can handle very big data</td>
+							            <td>less customizable, getting used to web apps might take some getting used to</td>
+							        </tr>
+							      	<tr style="background-color:#d0d6d9">
+							            <td><a href="https://plotnine.readthedocs.io/en/stable/">plotnine</a></td>
+							            <td><a href="https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">grammar of graphics</a></td>
+							            <td>similar to ggplot2 in R, straight forward to use</td>
+							            <td>less customizable</td>
+							        </tr>
+						        </tr></tbody>
+						    </table>
+						</font>
+						<p style="padding-bottom: 50px;"></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 80px; padding-bottom: 30px;">Plot types</p>
+						<font size="7">
+							<table>
+						    	<thead><tr>
+						            <th>dim 1</th>
+						            <th>dim 2</th>
+						            <th>type</th>
+						            <th>function</th>
+						        </tr></thead>
+						        <tbody>
+							      	<tr style="background-color:#d0d6d9">
+							            <td>numerical</td>
+							            <td>-</td>
+							            <td>histogram</td>
+							            <td><a href="https://seaborn.pydata.org/generated/seaborn.histplot.html">sns.histplot()</a></td>
+							        </tr>
+							      	<tr style="background-color:white">
+							            <td>numerical</td>
+							            <td>categorical</td>
+							            <td>bar chart</td>
+							            <td><a href="https://seaborn.pydata.org/generated/seaborn.barplot.html">sns.barplot()</a></td>
+							        </tr>
+							      	<tr style="background-color:#d0d6d9">
+							            <td>numerical</td>
+							            <td>time</td>
+							            <td>time series</td>
+							            <td><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html">ax.plot()</a></td>
+							        </tr>
+							      	<tr style="background-color:white">
+							            <td>numerical</td>
+							            <td>numerical</td>
+							            <td>scatter plot</td>
+							            <td><a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html">sns.scatterplot()</a></td>
+							        </tr>
+						        </tr></tbody>
+						    </table>
+						</font>
+						<p style="padding-bottom: 50px;"></p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom: 0px;">Example study</p>
+						<p style="font-size: 35px; padding-bottom:30px"><em><a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/lasser2022newconceptions.pdf">"New conceptions of truth foster misinformation in online public political discourse"</a></em></p>
+						<p style="text-align: left; padding-left:20px; font-size:31px; padding-bottom:20px">(-) Conceptions of "truth" splinter into two distinct camps.</p>
+						<p style="text-align: left; padding-left:20px; font-size:31px; padding-bottom:20px">(-) "Truth-seeking" aims to uncover factual information and update one's beliefs.</p>
+						<p style="text-align: left; padding-left:20px; font-size:31px; padding-bottom:20px">(-) "Belief-speaking" conceptualizes truth as "authenticity" and "speaking one's mind".</p>
+						<p style="text-align: left; padding-left:20px; font-size:31px; padding-bottom:30px">(-) We measure "truth-seeking" and "belief-speaking" in tweets by U.S. Congress Members.</p>
+					</section>
+					<section>
+						<p style="font-size: 80px; padding-bottom: 30px;">Example data</p>
+						<p style="font-size: 35px;"><em><a href="https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/lasser2022newconceptions.pdf">"New conceptions of truth foster misinformation in online public political discourse"</a></em></p>
+						<div class="r-stack">
+							<img class="fade-out" data-fragment-index="1" src="img/tweet_1.svg" width=1200>
+							<img class="fragment fade-in-then-out" data-fragment-index="2" src="img/tweet_2.svg" width=1200>
+							<img class="fragment fade-in-then-out" data-fragment-index="3" src="img/tweet_3.svg" width=1200>
+							<img class="fragment fade-in-then-out" data-fragment-index="4" src="img/tweet_4.svg" width=1200>
+						</div>
+						<p style="padding-bottom: 100px;"></p>
+					</section>
+
+					<section data-transition="slide-in none">
+						<p style="font-size: 60px; padding-bottom: 30px;">Histogram: number of tweets per account</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="1-8" style="font-size: 20px">
+									import matplotlib.pyplot as plt
+									import seaborn as sns
+									users = pd.read_csv("users.csv")
+
+									sns.histplot(
+										data=users, 
+										x="tweet_count"
+									)
+								</code></pre>
+							</div>
+							<div>
+								<img src="img/histogram_1.svg" width="600" style="margin-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Adapt aspect ration to data</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="1,6" style="font-size: 20px">
+									fig, ax = plt.subplots(figsize=(8, 4))
+
+									sns.histplot(
+										data=users, 
+										x="tweet_count",
+										ax=ax
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/histogram_2.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Choose intuitive bin width</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="7,8" style="font-size: 20px">
+									fig, ax = plt.subplots(figsize=(8, 4))
+
+									sns.histplot(
+										data=users, 
+										x="tweet_count",
+										ax=ax,
+										bins=range(0, 3510, 250),
+										shrink=0.8
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/histogram_3.svg" width="600" style="margin-top: 0px; padding-top: 60px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">De-cluttering</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="9,11-14" style="font-size: 18px">
+									fig, ax = plt.subplots(figsize=(8, 4))
+
+									sns.histplot(
+										data=users, 
+										x="tweet_count",
+										ax=ax,
+										bins=range(0, 3510, 250),
+										shrink=0.8,
+										edgecolor=None
+									)
+									ax.spines["top"].set_visible(False)
+									ax.spines["right"].set_visible(False)
+									ax.set_xlabel("Tweet count", fontsize=16)
+									ax.set_ylabel("User count", fontsize=16)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/histogram_4.svg" width="600" style="margin-top: 0px; padding-top: 60px;">
+							</div>
+						</div>
+					</section>
+
+
+					<section data-transition="slide-in none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Barchart: two categories</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="1-9" style="font-size: 20px">
+									fig, ax = plt.subplots(figsize=(8, 4))
+
+									sns.barblot(
+										data=belief_speaking, 
+										x="proportion",
+										y="time_period",
+										hue="party",
+										ax=ax
+									)
+								</code></pre>
+							</div>
+							<div>
+								<img src="img/barchart_1.svg" width="600" style="padding-top: 30px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Use known metaphors</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="9,10" style="font-size: 17px">
+									fig, ax = plt.subplots(figsize=(8, 4))
+
+									sns.barblot(
+										data=belief_speaking, 
+										x="proportion",
+										y="time_period",
+										hue="party",
+										ax=ax,
+										palette=["#0015BC", "#FF0000"],
+										hue_order=["Democrat", "Republican"]
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/barchart_2.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">De-cluttering</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="10-15" style="font-size: 17px">
+									sns.barblot(
+										data=belief_speaking, 
+										x="proportion",
+										y="time_period",
+										hue="party",
+										ax=ax,
+										palette=["#0015BC", "#FF0000"],
+										hue_order=["Democrat", "Republican"]
+									)
+									ax.spines['right'].set_visible(False)
+									ax.spines['top'].set_visible(False)
+									ax.legend(frameon=False, fontsize=16)
+									ax.set_ylabel("")
+									ax.set_xlabel("% of Tweets", fontsize=16)
+									ax.tick_params(axis='both', labelsize=12) 
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/barchart_3.svg" width="600" style="margin-top: 0px; padding-top: 60px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 70px; padding-bottom: 30px;">Alternative category representation</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="4-5,7-8" style="font-size: 15px">
+									sns.barblot(
+										data=belief_speaking, 
+										x="proportion",
+										y="party",
+										hue="time_period",
+										ax=ax,
+										palette=[(0.5, 0.5, 0.5), (0.2, 0.2, 0.2)],
+										hue_order=["2010 to 2013", "2019 to 2022"]
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<img src="img/barchart_4.svg" width="600" style="margin-top: 0px; padding-top: 60px;">
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="slide-in none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Time-series: number of tweets</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="1-14|1-7|8-14" style="font-size: 15px">
+									counts = pd.read_csv(
+										"tweet_counts.csv",
+										parse_dates = ["date"]
+									)
+									counts = counts.set_index("date")
+									dem = counts[counts["party"] == "Democrat"]
+									rep = counts[counts["party"] == "Republican"]
+
+									fig, ax = plt.subplots(figsize = (9, 4))
+									ax.plot(
+										dem.index,
+										dem["tweet_count"],
+										color = "#0015BC", 
+									)
+								</code></pre>
+							</div>
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<img src="img/timeseries_1.svg" width="600" style="padding-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Rolling average</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="2-5" style="font-size: 15px">
+									counts = counts.set_index("date")
+									dem = counts[counts["party"] == "Democrat"]\
+										.rolling("90D").mean()
+									rep = counts[counts["party"] == "Republican"]\
+										.rolling("90D").mean()
+
+									fig, ax = plt.subplots(figsize = (9, 4))
+									ax.plot(
+										dem.index,
+										dem["tweet_count"],
+										color = "#0015BC", 
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<img src="img/timeseries_2.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Labels & de-cluttering</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="6,8-11" style="font-size: 15px">
+									fig, ax = plt.subplots(figsize = (9, 4))
+									ax.plot(
+										dem.index,
+										dem["tweet_count"],
+										color = "#0015BC", 
+										label="Democrat"
+									)
+									ax.set_ylabel("Tweet count", fontsize=12)
+									ax.legend(frameon=False, loc=6)
+									ax.spines['right'].set_visible(False)
+									ax.spines['top'].set_visible(False)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<img src="img/timeseries_3.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 70px; padding-bottom: 30px;">Annotations</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="1-5|6-9|11-14" style="font-size: 12px">
+									p_elections = [pd.to_datetime(date) for\
+									            date in ["2012-11-06", "2016-11-08", "2020-11-03"]]
+									s_elections = [pd.to_datetime(date) for\
+									            date in ["2013-11-05", "2014-11-04", "2015-11-03",
+									                     "2017-11-07", "2018-11-06", "2019-11-05"]]
+									for el in p_elections:
+									    ax.plot([el, el], [0, 750], color="k")
+									for el in s_elections:
+									    ax.plot([el, el], [0, 600], "--", color="grey")
+									    
+									ax.text(pd.to_datetime("2013-07-01"), 650,
+									        "Congress elections", color="grey", fontsize=12)
+									ax.text(pd.to_datetime("2015-03-01"), 800,
+									        "Presidential elections", color="k", fontsize=12)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<img src="img/timeseries_4.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="slide-in none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Scatterplot: followers vs. following</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<pre><code data-trim data-noescape data-line-numbers="1-10" style="font-size: 15px">
+									fig, ax = plt.subplots(figsize = (7, 4))
+									sns.scatterplot(
+										data = users, 
+										x = "followers_count", 
+										y = "following_count", 
+										hue = "party",
+										palette = ["#0015BC", "#FF0000"],
+										hue_order = ["Democrat", "Republican"],
+										ax = ax
+									)
+								</code></pre>
+							</div>
+							<div>
+								<img src="img/scatterplot_1.svg" width="600" style="padding-top: 0px; padding-top: 0px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Logarithmic axis scales</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="11-12" style="font-size: 15px">
+									fig, ax = plt.subplots(figsize = (7, 4))
+									sns.scatterplot(
+										data = users, 
+										x = "followers_count", 
+										y = "following_count", 
+										hue = "party",
+										palette = ["#0015BC", "#FF0000"],
+										hue_order = ["Democrat", "Republican"],
+										ax = ax
+									)
+									ax.set_yscale("log")
+									ax.set_xscale("log")
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<img src="img/scatterplot_2.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 70px; padding-bottom: 30px;">Labels & de-cluttering</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="10-14" style="font-size: 15px">
+									sns.scatterplot(
+										data = users, 
+										x = "followers_count", 
+										y = "following_count", 
+										hue = "party",
+										palette = ["#0015BC", "#FF0000"],
+										hue_order = ["Democrat", "Republican"],
+										ax=ax
+									)
+									ax.set_xlabel("followers", fontsize=12)
+									ax.set_ylabel("following", fontsize=12)
+									ax.legend(frameon=False, fontsize=12)
+									ax.spines['right'].set_visible(False)
+									ax.spines['top'].set_visible(False)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 50px;"></p>
+								<img src="img/scatterplot_3.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 70px; padding-bottom: 30px;">Adding another data dimension</p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 1fr 1fr;
+							   grid-gap: 10px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<p style="padding-top: 20px;"></p>
+								<pre><code data-trim data-noescape data-line-numbers="5,9-10|12-14" style="font-size: 15px">
+									sns.scatterplot(
+										data = users, 
+										x = "followers_count", 
+										y = "following_count", 
+										size = "N_tweets",
+										hue = "party",
+										palette = ["#0015BC", "#FF0000"],
+										hue_order = ["Democrat", "Republican"],
+										alpha = 0.3,
+										linewidth = 0,
+										ax = ax
+									)
+									ax.legend(frameon = False, loc = 9, fontsize = 12,
+										bbox_to_anchor = [1.2, 0.9, 0, 0], 
+									)
+								</code></pre>
+								<p style="padding-bottom: 40px;"></p>
+							</div>
+							<div>
+								<p style="padding-top: 30px;"></p>
+								<img src="img/scatterplot_4.svg" width="600" style="margin-top: 0px; padding-top: 40px;">
+							</div>
+						</div>
+					</section>
+
+
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 60px; margin-bottom: 0px; padding-bottom: 10px;">Visualizing words: <a href="https://amueller.github.io/word_cloud/">wordcloud</a></p>
+						<img class="r-stretch" src="img/wordcloud.svg" style="padding-top: 0px; margin-top:0px">
+					</section>
+					<section>
+						<p style="font-size: 60px; margin-bottom: 0px; padding-bottom: 10px;">Visualizing words: <a href="https://github.com/JasonKessler/scattertext">scattertext</a></p>
+						<img class="r-stretch" src="img/scattertext.svg" style="padding-top: 0px; margin-top:0px">
+					</section>
+					<section>
+						<p style="font-size: 60px; margin-bottom: 0px; padding-bottom: 0px;">Visualizing words: <a href="https://ryanjgallagher.github.io/code/word_shift/overview">Word Shift Graphs</a></p>
+						<style>
+							.twocolumn {
+							   display: grid;
+							   grid-template-columns: 2fr 1fr;
+							   grid-gap: 40px;
+							   text-align: left;
+							}
+						</style>
+						<div class="twocolumn">
+							<div>
+								<li style="text-align: left; padding-top:50px; font-size:35px">Quantify <em>which</em> words contribute to a difference between two texts.</li>
+								<li style="text-align: left; padding-top:40px; font-size:35px;">Quantify <em>how</em> words contribute the difference.</li>
+								<li style="text-align: left; padding-top:40px; font-size:35px">Can be used for comparing texts according to word proportions, sentiment, ... (any dictionary).</li>
+								<li style="text-align: left; padding-top:40px; font-size:35px">Ryan Gallagher: "whenever you think about using a wordcloud, use a Word Shift Graph instead".</li>
+							</div>
+							<div>
+								<img src="img/word_shift.png" width="260" style="margin-top: 0px; padding-top: 40px">
+							</div>
+						</div>
+					</section>
+					<section>
+						<p style="font-size: 60px; padding-bottom:0px; margin-bottom:0px">Visualizing networks: <a href="https://networkx.org/documentation/stable/reference/generated/networkx.drawing.layout.spring_layout.html">spring layout</a></p>
+						<img src="img/network_uni.svg" class="r-stretch" style="margin-top: 0px; padding-top: 0px;; padding-bottom: 0px; margin-bottom: 0px;">
+						<p style="font-size: 20px; padding-top:0px; margin-top:0px"><a href="https://github.com/JanaLasser/uni_SEIRX/blob/main/code/network/visualize_network.ipynb">Code source</a></p>
+					</section>
+					<section>
+						<p style="font-size: 50px; padding-bottom:20px; margin-bottom:0px">Visualizing networks: known underlying structure</p>
+						<img src="img/network_school.svg" class="r-stretch" style="margin-top: 0px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+						<p style="font-size: 20px; padding-top:0px; margin-top:0px"><a href="https://github.com/JanaLasser/school_SEIRX/blob/main/code/visualizations/visualize_school_network.ipynb">Code source</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 80px;">Random things I thought might be helpful</p>
+					</section>
+					<section>
+						<p style="font-size: 80px;">Colors</p>
+						<p style="font-size: 45px; text-align:left"><a href="https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40">Coloring for colorblindness</a></p>
+						<p style="font-size: 45px; text-align:left"><a href="https://colorhunt.co/">Color hunt color palettes</a></p>
+					</section>
+					<section>
+						<p style="font-size: 80px;">Image filetypes</p>
+						<pre><code data-trim data-noescape data-line-numbers="1|3-4|6|8-9" style="font-size: 25px">
+							plt.savefig("my_figure.png", dpi=300)
+
+							# great to import in Inkscape or Adobe Illustrator
+							plt.savefig("my_figure.svg")
+
+							plt.savefig("my_figure.pdf")
+
+							# this does not work :(
+							plt.savefig("my_figure.eps")
+						</code></pre>
+					</section>
+					<section>
+						<p style="font-size: 80px;">Plot coding style: use functions</p>
+						<pre><code data-trim data-noescape data-line-numbers="1-7|9|11-14" style="font-size: 20px">
+							def PlotSomethingNice(ax, data, param="xy"):
+								...
+								...
+
+							def PlotAnotherNiceThing(ax, data, param="xy"):
+								...
+								...
+
+							fig, axes = plt.subplots(2, 2)
+
+							PlotSomethingNice(axes[0][0], subset1, param="first part")
+							PlotSomethingNice(axes[0][1], subset2, param="second part")
+							PlotAnotherNiceThing(axes[1][0], df, param="do this")
+							PlotAnotherNiceThing(axes[1][1], df, param="do something else")
+						</code></pre>
+					</section>
+					<section>
+						<p style="font-size: 80px;">Large data</p>
+						<p style="font-size: 40px; text-align:left"><b>Problem 1</b>: since every data point is an object, Matplotlib gets VERY slow for large amounts of data.</p>
+						<p style="font-size: 40px; text-align:left; padding-bottom: 50px;"><b>Problem 2</b>: figure files also get VERY large because of this.</p>
+						<p style="font-size: 40px; text-align:left"><b>Solution 1</b>: subsample your data.</p>
+						<pre><code data-trim data-noescape style="font-size: 20px">
+							less_data = lots_of_data.sample(frac=0.05, random_state=42)
+						</code></pre>
+						<p style="font-size: 40px; text-align:left"><b>Solution 2</b>: rasterize your figures and save as .png.</p>
+					</section>
+				</section>
+				<section>
+					<p style="font-size: 60px; padding-bottom:0px; margin-bottom:30px">Summary</p>
+					<p style="font-size: 40px; text-align:left; padding-bottom:30px">Matplotlib + Seaborn offers both high abstraction and excessive detail.</p>
+					<p style="font-size: 40px; text-align:left; padding-bottom:30px">Use known visual metaphors and de-clutter your plots for maximum clarity.</p>
+					<p style="font-size: 40px; text-align:left">Whenever you do something unexpected in your visuals (resampling or excluding data, truncating axes), DESCRIBE IT in the text.</p>
+				</section>
+
+				
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200, //used to be 960
+  				height: 700,
+  				slideNumber: 'c',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<style type="text/css">
+		    /* 1. Style header/footer <div> so they are positioned as desired. */
+		    #header-left {
+		        position: absolute;
+		        top: 0%;
+		        left: 0%;
+		    }
+		    #header-right {
+		        position: absolute;
+		        top: 0%;
+		        right: 0%;
+		    }
+		    #footer-left {
+		        position: absolute;
+		        bottom: 0%;
+		        left: 0%;
+		    }
+		</style>
+
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+		    <div id="header">
+		        <div id="footer-left" style="font-size: 20px; padding-bottom:10px; padding-left:10px; color:#1a88a1">Jana Lasser &#8287&#8287&#8287 | &#8287&#8287&#8287 jana.lasser@tugraz.at &#8287&#8287&#8287 | &#8287&#8287&#8287 @janalasser</div>
+		    </div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+		    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		    var header = $('#header').html();
+		    if ( window.location.search.match( /print-pdf/gi ) ) {
+		        Reveal.addEventListener( 'ready', function( event ) {
+		            $('.slide-background').append(header);
+		        });
+		    }
+		    else {
+		        $('div.reveal').append(header);
+		   }
+		</script>
+	</body>
+</html>
+
