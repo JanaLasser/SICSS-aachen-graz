@@ -17,13 +17,12 @@ https://youtu.be/Lv9DjfeacSM)]
 
 ### Day 3
 * Guest lecture by David Garcia: “Combining surveys and big data” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_01_big_data_and_surveys/exercise/hfhub_transformer_intro.ipynb)]
-* Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[Exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)]
+* Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)]
 
 ### Day 4
 * Lecture by Ivan Smirnov: “How to write a (good!) CSS paper”
 * Group activity & discussion on how to write a good CSS paper
-* Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts”
-* Exercise: “Creating informative visualizations using Python”
+* Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts” [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise.ipynb)] [[plotting code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_slides.ipynb)]
 
 ### Day 5
 * Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects”
