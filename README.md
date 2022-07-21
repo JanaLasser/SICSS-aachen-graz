@@ -17,7 +17,7 @@ https://youtu.be/Lv9DjfeacSM)]
 * Guest lecture by David Garcia: “Combining surveys and big data” [[slides](https://dgarcia-eu.github.io/SICSS-2022/#1)] [[lecture recording](
 https://youtu.be/j44XhEgfJX0)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_01_big_data_and_surveys/exercise/hfhub_transformer_intro.ipynb)] [[exercise recording](
 https://youtu.be/YlMM26BHrZI)]
-* Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[lecture recording](https://youtu.be/GR-OO-BYzs8)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)] [[exercise introduction recording](https://youtu.be/kEKpS0EpEs8)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise_solution.ipynb)]
+* Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[slides](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/introduction_to_networks_in_CSS.pdf)] [[lecture recording](https://youtu.be/GR-OO-BYzs8)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)] [[exercise introduction recording](https://youtu.be/kEKpS0EpEs8)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise_solution.ipynb)]
 
 ### Day 4
 * Lecture by Ivan Smirnov: “How to write a (good!) CSS paper”
