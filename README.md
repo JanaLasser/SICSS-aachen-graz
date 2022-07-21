@@ -13,8 +13,6 @@ https://youtu.be/jdUrOJbYhCw)] [[exercise](https://github.com/JanaLasser/SICSS-a
 * Guest lecture by Anna Di Natale: “How to use Amazon Mechanical Turk [[slides](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/SICCSS_MTurk_slides.pdf)] [[handout](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/02_02_MTurk/MTurk_basics_handout.pdf)] [[lecture recording](
 https://youtu.be/Lv9DjfeacSM)]
 
-* POSTPONED: ~~Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”~~
-
 ### Day 3
 * Guest lecture by David Garcia: “Combining surveys and big data” [[slides](https://dgarcia-eu.github.io/SICSS-2022/#1)] [[lecture recording](
 https://youtu.be/j44XhEgfJX0)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_01_big_data_and_surveys/exercise/hfhub_transformer_intro.ipynb)] [[exercise recording](
@@ -28,8 +26,9 @@ https://youtu.be/YlMM26BHrZI)]
 
 ### Day 5
 * Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects”
-* Lecture by Jana Lasser: “Ethical dimensions of CSS research”
+* Lecture by Jana Lasser and David Garcia: “Ethical dimensions of CSS research” [[slides ethics](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/111_Ethics/Ethics.html)] [[slides representation](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/112_RepresentationInDigitalTraces/Slides/index.html)] [[slides measurement issues](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/113_MeasurementIssues/Slides/index.html)]
 * Project idea generation & group formation
+* Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”
 
 ### Day 6
 
