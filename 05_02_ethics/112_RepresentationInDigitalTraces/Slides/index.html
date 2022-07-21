@@ -1,0 +1,294 @@
+<!doctype html>
+
+<html>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script>
+	  Reveal.initialize({
+	    plugins: [ RevealMarkdown ]
+	  });
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Representation in Digital Traces
+					<p><small> Jana Lasser</small></p>
+					<p><small><em>TU Graz </em></small></p>
+					<p><small> Foundations of Computational Social Systems</small></p>
+				</section>
+
+				<section data-transition="slide-in none">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Who is included in the research?</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<img src="img/milgram_1.svg", width="400">
+						</div>
+						<div class="col">
+						</div>
+					</div>
+					<a style="font-size: 20px; text-align:left", href="https://www.jstor.org/stable/20297701?casa_token=GD_vYcvZfWsAAAAA%3Aw2gVkJSqOjaOfsia-w7N9PBzp3qEBlSfeJLu3vkMrhTo49o6_gOh-2YEvlACwPDQjJ4xiO2UJMisiJKux_zR-3i0zwpIfFACTFkO5ld0QJeJUSNSvVFx&seq=1#metadata_info_tab_contents">Milgram 1974: The Dilemma of Obedience</a>
+				</section>
+				<section data-transition="none">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Who is included in the research?</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<img src="img/milgram_2.svg", width="400">
+						</div>
+						<div class="col">
+						</div>
+					</div>
+					<a style="font-size: 20px; text-align:left", href="https://www.jstor.org/stable/20297701?casa_token=GD_vYcvZfWsAAAAA%3Aw2gVkJSqOjaOfsia-w7N9PBzp3qEBlSfeJLu3vkMrhTo49o6_gOh-2YEvlACwPDQjJ4xiO2UJMisiJKux_zR-3i0zwpIfFACTFkO5ld0QJeJUSNSvVFx&seq=1#metadata_info_tab_contents">Milgram 1974: The Dilemma of Obedience</a>
+				</section>
+				<section data-transition="none slide-out">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Who is included in the research?</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<img src="img/milgram_2.svg", width="400">
+						</div>
+						<div class="col">
+							<li style="text-align: left; font-size:30px; padding-bottom:70px">Empirical social science wants to find generalizable patterns.</li>
+							<li style="text-align: left; font-size:30px; padding-bottom:70px">Convenience and social norms lead us to exclude many.</li>
+							<li style="text-align: left; font-size:30px">Large swathes of published research is not as generally applicable as claimed.</li>
+						</div>
+					</div>
+					<a style="font-size: 20px; text-align:left", href="https://www.jstor.org/stable/20297701?casa_token=GD_vYcvZfWsAAAAA%3Aw2gVkJSqOjaOfsia-w7N9PBzp3qEBlSfeJLu3vkMrhTo49o6_gOh-2YEvlACwPDQjJ4xiO2UJMisiJKux_zR-3i0zwpIfFACTFkO5ld0QJeJUSNSvVFx&seq=1#metadata_info_tab_contents">Milgram 1974: The Dilemma of Obedience</a>
+				</section>
+
+				<section data-transition="slide-in none">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Computational Social Science to the rescue!</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">Digital traces ...</span></em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Twitter </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Search histories </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Digitized books </li>
+							<li style="text-align: left; font-size:35px"> ... What else?</li>
+						</div>
+						<div class="col" style="color:white">
+							<p style="text-align: left; font-size: 35px"><em>... are great</em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> millions of observations </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> from free services </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> everybody is included</li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px;">... right? </li>
+						</div>
+					</div>
+				</section>
+				<section data-transition="none">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Computational Social Science to the rescue!</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">Digital traces ...</span></em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Twitter </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Search histories </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Digitized books </li>
+							<li style="text-align: left; font-size:35px"> ... What else?</li>
+						</div>
+						<div class="col">
+							<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">... are great</span></em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> millions of observations </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> from free services </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> everybody is included</li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px; color:white"> ... right? </li>
+						</div>
+					</div>
+				</section>
+				<section data-transition="none">
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Computational Social Science to the rescue!</p>
+					<style>
+						.container{
+						    display: flex;
+						}
+						.col{
+						    flex: 1;
+						}
+					</style>
+					<div class="container">
+						<div class="col">
+							<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">Digital traces ...</span></em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Twitter </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Search histories </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> Digitized books </li>
+							<li style="text-align: left; font-size:35px"> ... What else?</li>
+						</div>
+						<div class="col">
+							<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">... are great</span></em></p>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> millions of observations </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> from free services </li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px"> everybody is included</li>
+							<li style="text-align: left; font-size:35px; padding-bottom:30px;"> <span style="color:#D22779">... right?</span> </li>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<p style="font-size: 45px; padding-bottom:10px; color:#0C1E7F"> Whom trace data measure </p>
+					<p style="font-size: 35px; padding-bottom:30px"><em>Digital trace data are subject to a different kind of sampling</em></p>
+					<p style="font-size: 35px; text-align:left; padding-bottom:20px">Who uses a service <span style="color:#D22779">at all</span>?</p>
+					<p style="font-size: 35px; text-align:left; padding-bottom:20px">Who uses a service <span style="color:#D22779">when</span>?</p>
+					<p style="font-size: 35px; text-align:left; padding-bottom:20px">Who uses a service <span style="color:#D22779">how much</span>?</p>
+					<p style="font-size: 35px; text-align:left; padding-bottom:20px">Who <span style="color:#D22779">discloses</span> which kind of information?</p>
+					<p style="font-size: 35px; text-align:left">How do users <span style="color:#D22779">behave</span> on different platforms?</p>
+				</section>
+
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Who uses a service at all?</p>
+						<img src="img/twitter_age_census.png", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0115545">Sloan et al. 2015: Who Tweets? Deriving the Demographic Characteristics of Age, Occupation and Social Class from Twitter User Meta-Data</a></p>
+					</section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 42px; padding-bottom:30px; color:#0C1E7F"> Demographic biases in digital platforms and services</p>
+						<p style="font-size: 35px; padding-bottom:30px"><em>Can you think of services that are used more by ...</em></p>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... older people?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... conservative people?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... non-Americans?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... poorer people?</li>
+						<li style="text-align: left; font-size:35px; color:white">And what about non-internet users?</li>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 42px; padding-bottom:30px; color:#0C1E7F"> Demographic biases in digital platforms and services</p>
+						<p style="font-size: 35px; padding-bottom:30px"><em>Can you think of services that are used more by ...</em></p>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... older people?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... conservative people?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... non-Americans?</li>
+						<li style="text-align: left; font-size:35px; padding-bottom:20px">... poorer people?</li>
+						<li style="text-align: left; font-size:35px; color:#D22779">And what about non-internet users?</li>
+					</section>
+					<section>
+						<p style="font-size: 42px; padding-bottom:30px; color:#0C1E7F"> Systematic biases in the Google Books Corpus</p>
+						<img src="img/google_books_scientific_texts.png", width="500">
+						<p style="font-size: 20px; padding-top:0px; margin-top: 0px; text-align: left;"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137041">Pechenick et al. 2015: Characterizing the Google Books Corpus: Strong Limits to Inferences of Socio-Cultural and Linguistic Evolution</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Who uses a service when?</p>
+						<img src="img/social_media_teen_usage.png", width="700">
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Gender of crowdworkers on prolific</p>
+						<img src="img/tiktok_gender.jpg", width="700">
+						<p style="font-size:20px"><a href="https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific">The Verge: A Teenager on TikTok disrupted thousands of scientific studies with a single video</a></p>
+					</section>
+				</section>
+				<section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 45px; padding-bottom:10px; color:#0C1E7F"> Who uses a service how much?</p>
+						<p style="font-size: 35px; padding-bottom:0px; color:#0C1E7F"> <span style="color:white">Who would be represented in a uniform sample of tweets?</span></p>
+						<img src="img/tweets_per_user.png", width="700">
+						<p style="font-size: 20px; padding-top:0px; margin-top: 0px;"><a href="https://ieeexplore.ieee.org/abstract/document/7396850">Zarrinkalam et al. 2015: Semantics-Enabled User Interest Detection from Twitter</a></p>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 45px; padding-bottom:10px; color:#0C1E7F"> Who uses a service how much?</p>
+						<p style="font-size: 35px; padding-bottom:0px; color:#0C1E7F"> <span style="color:#D22779">Who would be represented in a uniform sample of tweets?</span></p>
+						<img src="img/tweets_per_user.png", width="700">
+						<p style="font-size: 20px; padding-top:0px; margin-top: 0px;"><a href="https://ieeexplore.ieee.org/abstract/document/7396850">Zarrinkalam et al. 2015: Semantics-Enabled User Interest Detection from Twitter</a></p>
+					</section>
+				</section>
+				<section>
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Who discloses which kind of information?</p>
+					<p style="font-size: 35px; text-align:left; padding-bottom:20px"><em>Different kinds of analyses might require you to include or exclude users who disclose different kinds of information:</em></p>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Users who disclose locations <a style="font-size: 35px;" href="https://www.science.org/doi/10.1126/science.aau2706">(Girnberg et al. 2019)</a></li>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Users who disclose their name</li>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Users who disclose party affiliation <a style="font-size: 35px;" href="https://www.science.org/doi/10.1126/science.aaa1160#:~:text=Friends%20shared%20substantially%20less%20cross,of%20this%20cross%2Dcutting%20content.">(Bakshy et al. 2015)</a></li>
+					<p style="font-size: 35px; padding-bottom:0px; color:#0C1E7F; text-align:left"> <span style="color:#D22779">How could such a filtering bias the sample?</span></p>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> How do users behave on different platforms?</p>
+						<img src="img/usage_over_weeks.png", width="700">
+						<p style="font-size: 20px; padding-top:0px; margin-top: 0px;"><a href="https://arxiv.org/pdf/1507.03510.pdf">Lim et al. 2015: #mytweet via Instagram: Exploring User Behaviour across Multiple Social Networks</a></p>
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Filtering out bots?</p>
+						<p style="font-size: 30px; text-align:left">Filtering out bots for example with <a href="https://rapidapi.com/auth/sign-up?referral=/OSoMe/api/botometer-pro">Botometer</a> is common practice in many analysis pipelines. <span style="color:#D22779">But there is a false-positive problem!</span></p>
+						<img src="img/botometer.png", width="600">
+						<p style="font-size: 20px; padding-top:0px; margin-top: 0px;"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0241045">Rauchfleisch & Kaiser 2020: The False positive problem of automatic bot detection in social science research</a></p>
+					</section>
+				</section>
+				<section>
+					<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Summary</p>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Platforms and systems that we collect data from were generally not designed with research in mind.</li>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Our data collection systems are biased away from minority- and marginal populations.</li>
+					<li style="text-align: left; font-size:35px; padding-bottom:30px">Platforms and usage contexts are constantly changing and so are the digital traces left on them.</li>
+				</section>
+				<section>
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> What can we do?</p>
+					<li style="text-align: left; font-size:32px; padding-bottom:60px"><span style="color:#D22779">Dont force generality:</span> A study of Turkish immigrants that use Twitter and live in Vienna is fine – if you don't sell it for something else.</li>
+					<li style="text-align: left; font-size:32px; padding-bottom:60px"><span style="color:#D22779">Think clearly about systematic biases:</span> Many platforms disclose demographic information. If the platform fits the context of the research question, there is no shame in using a biased dataset.</li>
+					<li style="text-align: left; font-size:32px; padding-bottom:0px"><span style="color:#D22779">Rebalancing data can help generalizability.</span> See for example <a href="https://www.sciencedirect.com/science/article/pii/S0169207014000879">Wang et al. 2015: Forecasting elections with non-representative polls</a>.</li>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+---
+title: "The ethics of social media research"
+author: "David Garcia, 2021"
+output: html_document
+---
+
+[**[You can find the lecture slides here]**](https://dgarcia-eu.github.io/FoundationsOfCSS/11_EthicalAndScientificIssues/111_Ethics/Slides/Ethics_Slides.html)
+
+### Recommended Readings
+
+1. [Ten simple rules for responsible big data research. Zook et al. (2017)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005399)
+
+2. [Responses to Critiques on Machine Learning of Criminality Perceptions (Addendum of arXiv:1611.04135), Wu and Zhang (2017)](https://arxiv.org/abs/1611.04135)
+
+3. [Experimental evidence of massive-scale emotional contagion through social networks. Kramer et al, PNAS (2014)](https://www.pnas.org/content/111/24/8788)
+
+### Additional Readings
+
+-  [Internet Research: Ethical Guidelines 3.0. Association of Internet Researchers (2019)](https://aoir.org/reports/ethics3.pdf)
+
+-  [Users' Views of Ethics in Social Media Research: Informed Consent, Anonymity, and Harm. Williams et al, 2017](emerald.com/insight/content/doi/10.1108/S2398-601820180000002002/full/html)
+]

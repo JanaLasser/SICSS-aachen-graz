@@ -1,0 +1,320 @@
+<!doctype html>
+
+<html>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script>
+	  Reveal.initialize({
+	    plugins: [ RevealMarkdown ]
+	  });
+	</script>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Measurement issues
+					<p><small> Jana Lasser</small></p>
+					<p><small><em>TU Graz </em></small></p>
+					<p><small> Foundations of Computational Social Systems</small></p>
+				</section>
+
+				<section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Central principles of measurement</p>
+						<img src="img/measurement_1.svg", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;">Adapted from <a href="https://www.nature.com/articles/s41586-021-03660-7">Lazer et al. 2021: Meaningul measures of human society in the twenty-first century</a></p>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Central principles of measurement</p>
+						<img src="img/measurement_2.svg", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;">Adapted from <a href="https://www.nature.com/articles/s41586-021-03660-7">Lazer et al. 2021: Meaningul measures of human society in the twenty-first century</a></p>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Central principles of measurement</p>
+						<img src="img/measurement_3.svg", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;">Adapted from <a href="https://www.nature.com/articles/s41586-021-03660-7">Lazer et al. 2021: Meaningul measures of human society in the twenty-first century</a></p>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Central principles of measurement</p>
+						<img src="img/measurement_4.svg", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;">Adapted from <a href="https://www.nature.com/articles/s41586-021-03660-7">Lazer et al. 2021: Meaningul measures of human society in the twenty-first century</a></p>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 45px; padding-bottom:0px; color:#0C1E7F"> Central principles of measurement</p>
+						<img src="img/measurement_5.svg", width="600">
+						<p style="font-size: 20px; text-align:left; padding-top:0px; margin-top: 0px;">Adapted from <a href="https://www.nature.com/articles/s41586-021-03660-7">Lazer et al. 2021: Meaningul measures of human society in the twenty-first century</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 42px; padding-bottom:10px; color:#0C1E7F"> Issues with measurement: Reflexivity</p>
+						<p style="font-size: 35px; padding-bottom:0px"><em>Imagine this poll is posted shortly before an election:</em></p>
+						<img src="img/vote_shares.svg", width="400">
+						<p style="text-align: left; font-size:35px; padding-bottom:0px">How would you expect voters of black to react to the poll?</p>
+						<p style="text-align: left; font-size:35px; padding-bottom:0px">How voters of red? How voters of green?</p>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 42px; padding-bottom:10px; color:#0C1E7F"> Issues with measurement: Reflexivity</p>
+						<p style="font-size: 35px; padding-bottom:0px"><em>Imagine this poll is posted shortly before an election:</em></p>
+						<img src="img/vote_shares.svg", width="400">
+						<p style="text-align: left; font-size:35px; padding-bottom:20px"><a href="https://www.jstor.org/stable/2745982?seq=1#metadata_info_tab_contents">Simon 1954: Bandwagon and Underdog Effects and the Possibility of Election Predictions</a></p>
+					</section>
+					<section>
+						<p style="font-size: 42px; padding-bottom:30px; color:#0C1E7F"> Reflexivity</p>
+						<p style="font-size: 38px; padding-bottom:50px"><em>Humans actively change the world they are observing by acting on the knowledge gained &#160 &#x2192 &#160 self-fulfilling prophecy.</em></p>
+						<p class="fragment" style="font-size: 38px; padding-bottom:30px"><em>Measurements can distort the phenomena they are designed to measure.</em></p>
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:10px; color:#0C1E7F"> Observer effects</p>
+						<img src="img/interviewer_impact.svg", width="720">
+						<p style="text-align: left; font-size:20px; padding-bottom:0px"><a href="https://www.jstor.org/stable/2111718?seq=1#metadata_info_tab_contents">Davis 1997: The Direction of Race of Interviewer Effects among African-Americans: Donning the Black Mask.</a></p>
+					</section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Observer effects</p>
+						<style>
+							.container{
+							    display: flex;
+							}
+							.col{
+							    flex: 1;
+							}
+						</style>
+						<div class="container">
+							<div class="col">
+								<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">The olden days:</span></em></p>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> Behavioural data is collected via interviews.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewer "observes" the interviewee.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewee reacts to the gender, age and race of the interviewer.</li>
+							</div>
+							<div class="col" style="color:white">
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Observer effects</p>
+						<style>
+							.container{
+							    display: flex;
+							}
+							.col{
+							    flex: 1;
+							}
+						</style>
+						<div class="container">
+							<div class="col">
+								<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">The olden days:</span></em></p>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> Behavioural data is collected via interviews.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewer "observes" the interviewee.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewee reacts to the gender, age and race of the interviewer.</li>
+							</div>
+							<div class="col">
+								<p style="text-align: right; font-size: 35px"><em><span style="color:#D22779">What kind of observer effects can we encounter in digital data collection?</span></em></p>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Observer effects</p>
+						<style>
+							.container{
+							    display: flex;
+							}
+							.col{
+							    flex: 1;
+							}
+						</style>
+						<div class="container">
+							<div class="col">
+								<p style="text-align: left; font-size: 35px"><em><span style="color:#D22779">The olden days:</span></em></p>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> Behavioural data is collected via interviews.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewer "observes" the interviewee.</li>
+								<li style="text-align: left; font-size:35px; padding-bottom:30px"> The interviewee reacts to the gender, age and race of the interviewer.</li>
+							</div>
+							<div class="col">
+								<p style="text-align: right; font-size: 35px; padding-bottom:30px"><em><span style="color:#D22779">What kind of observer effects can we encounter in digital data collection?</span></em></p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Performative behaviour</p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Obfuscation</p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Self-censoring</p>
+							</div>
+						</div>
+					</section>
+					<section data-transition="slide-in none">
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Observer effects</p>
+						<style>
+							.container{
+							    display: flex;
+							}
+							.col{
+							    flex: 1;
+							}
+						</style>
+						<div class="container">
+							<div class="col">
+								<p style="text-align: left; font-size: 35px; padding-bottom:30px"><em><span style="color:#D22779">What kind of observer effects can we encounter in digital data collection?</span></em></p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Performative behaviour</p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Obfuscation</p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Self-censoring</p>
+							</div>
+							<div class="col">
+								<p style="text-align: right; font-size: 35px; padding-bottom:30px"><em><span style="color:#D22779">In which ways could the distribution of observer effects be systematically biased?</span></em></p>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none slide-out">
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Observer effects</p>
+						<style>
+							.container{
+							    display: flex;
+							}
+							.col{
+							    flex: 1;
+							}
+						</style>
+						<div class="container">
+							<div class="col">
+								<p style="text-align: left; font-size: 35px; padding-bottom:30px"><em><span style="color:#D22779">What kind of observer effects can we encounter in digital data collection?</span></em></p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Performative behaviour</p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Obfuscation</p>
+								<p style="text-align: left; font-size: 35px; padding-bottom:20px">Self-censoring</p>
+							</div>
+							<div class="col">
+								<p style="text-align: right; font-size: 35px; padding-bottom:30px"><em><span style="color:#D22779">In which ways could the distribution of observer effects be systematically biased?</span></em></p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Number of followers</p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Technical skills</p>
+								<p style="text-align: right; font-size: 35px; padding-bottom:20px">Political opinion</p>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Algorithmic confounding</p>
+						<p style="font-size: 35px; padding-bottom:20px; text-align: left;"> 
+							<span style="color:#D22779">Systematic algorithmic biases</span> <br>
+							<em>Example: <a href="https://kieranhealy.org/files/papers/performativity.pdf">The performativity of networks</a></em>
+						</p>
+						<p class="fragment" style="font-size: 35px; padding-bottom:20px; text-align:left">
+							<span style="color:#D22779">Sudden changes in algorithms</span><br>
+							<em>Example: Changes in a recommender system</em>
+						</p>
+						<p class="fragment" style="font-size: 35px; padding-bottom:20px; text-align:left">
+							<span style="color:#D22779">Algorithm "reflexivity"</span><br>
+							<em>Example: <a href="https://www.science.org/doi/full/10.1126/science.1248506">The Parable of Google Flu</a></em><br><br>
+							<span style="font-size:20px">Further reading: <a href="https://www.nature.com/articles/s41586-021-03666-1">Wagner et al. 2021: Measuring algorithmically infused societies</a></span>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> The ambiguity of human expressions</p>
+						<img src="img/risk_development.jpg", width="700">
+						<p style="font-size: 20px;"> <a href="https://www.sciencedirect.com/science/article/pii/S0010027720301633?casa_token=6XzByDgIAa8AAAAA:xNGUCzE-SLRgNJLYI8A_vi9VUb-iNFHojCxsCSQ1otFAwv-UHvHFkM38unCVEMC_nji5NW0DCg">Li et al. 2020: A brief history of risk.</a></p>
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> The ambiguity of human expressions</p>
+
+						<p style="font-size: 35px; text-align: left; padding-bottom:30px">Human language is <span style="color:#D22779">drifting</span>: Words might change meaning, become <a href="https://en.wikipedia.org/wiki/Dog_whistle_(politics)">dog whistles</a> and new words might be created.</p>
+
+						<p class="fragment" style="font-size: 35px; text-align: left; padding-bottom:30px">There are advances in automated sarcasm detection <span style="font-size: 35px;">(see for example <a href="https://arxiv.org/pdf/1805.06413.pdf">Hazarika et al. 2018</a>)</span> but detecting <span style="color:#D22779">sarcasm</span>, <span style="color:#D22779">irony</span> and <span style="color:#D22779">hyperbole</span> in text remains notoriously hard.</p>
+
+						<p class="fragment"; style="font-size: 35px; text-align: left">The  <span style="color:#D22779">context</span> of a text might completely change it's meaning.<br><em>What contexts can you think of that are relevant for social media?</em></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> The meaning of measures</p>
+						<img src="img/wuhan_population_flow.png", width="800">
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> The meaning of measures</p>
+						<p style="font-size: 35px; padding-bottom:30px; text-align: left;">Goal: measure a theoretical <span style="color:#D22779">concept</span> (infection risk, media consumption, physical activity, ...).</p>
+						<p style="font-size: 35px; padding-bottom:30px; text-align: left;">To approximate the concept we need to extract <span style="color:#D22779">meaning</span> from the raw data available to us. We do this by <span style="color:#D22779">constructing measures</span>.</p>
+						<p class="fragment" style="font-size: 35px; padding-bottom:30px; text-align: left;">There will be <span style="color:#D22779">slippage</span> between construct and concept. <br><br>
+						Constructs and even concepts will be <span style="color:#D22779">unstable</span> in space and time.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Ways forward: Triangulating measures</p>
+						<img src="img/emotion_triangulation.svg", width="700">
+						<p style="font-size: 20px;"> <a href="https://arxiv.org/abs/2107.13236">Garcia et al. 2021: Social media emotion macroscopes reflect emotional experiences in society at large.</a></p>
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Ways forward: Linking data sources</p>
+						<img src="img/demographics.png", width="500">
+						<p style="font-size: 20px;"> <a href="https://academic.oup.com/poq/article/85/S1/323/6342443">Hughes et al. 2021: Using Administrative Records and Survey Data to Construct Samples of Tweeters and Tweets.</a></p>
+					</section>
+					<section>
+						<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Ways forward: Updating models and measures</p>
+						<p style="font-size: 35px; text-align:left; padding-bottom: 50px;">Established constructs might have drastically changed and need to be updated to match <span style="color:#D22779">current social realities</span> (example: <a href="https://electionstudies.org/wp-content/uploads/2018/03/anes_timeseries_1978_qnaire_post.pdf">voter interview questionnaire</a>).</p>
+						<p class="fragment" style="font-size: 35px; text-align:left">Many data sources offer continuous data streams. This gives the opportunity for <span style="color:#D22779">continuous evaluation</span>.</p>
+					</section>
+				</section>
+				<section>
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Summary</p>
+					<li style="text-align: left; font-size:35px; padding-bottom:20px">Central principles of measurement</li>
+					<li style="text-align: left; font-size:35px; padding-bottom:20px">
+						Issues with measurement
+						<p style="text-align: left; font-size:35px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Reflexivity (self-fulfilling prophecy, observer effects)</p>
+						<p style="text-align: left; font-size:35px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Algorithmic confounding</p>
+						<p style="text-align: left; font-size:35px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Ambiguity</p>
+						<p style="text-align: left; font-size:35px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Slippage</p>
+						<p style="text-align: left; font-size:35px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 20px; margin-bottom: 0px;">&#x2192 Instability</p>
+					</li>
+					<li style="text-align: left; font-size:35px">Ways forward</li>
+				</section>
+				<section>
+					<p style="font-size: 45px; padding-bottom:30px; color:#0C1E7F"> Grand summary</p>
+					<li style="text-align: left; font-size:35px; padding-bottom:10px">
+						The ethics of social media research
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Weighing risks and benefits</p>
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Data sharing</p>
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Informed conset</p>
+					</li>
+					<li style="text-align: left; font-size:35px; padding-bottom:20px">
+						Representation in Social media
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Platforms/systems were not designed with research in mind</p>
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Out data sources suffer from many biases</p>
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Platforms and usage contexts change constantly</p>
+					</li>
+					<li style="text-align: left; font-size:35px">
+						Measurement issues
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Central principles of measurement</p>
+						<p style="text-align: left; font-size:25px; padding-left:50px; padding-top:0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">&#x2192 Issues with measurement (reflexivity, algorithmic confounding, ambiguity, slippage, instability)</p>
+					</li>
+				</section>				
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

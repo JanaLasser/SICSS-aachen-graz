@@ -1,0 +1,18 @@
+---
+title: "Measurement Issues"
+author: "Jana Lasser, 2022"
+output: html_document
+---
+
+[**[You can find the lecture slides here]**](https://dgarcia-eu.github.io/FoundationsOfCSS/11_EthicalAndScientificIssues/113_MeasurementIssues/Slides/index.html)
+
+### Recommended Readings
+
+1. [Meaningful measures of human society in'the twenty-first century. Lazer et al. (2021)](https://www.nature.com/articles/s41586-021-03660-7)
+
+2. [Measuring algorithmically infused societies. (Wagner et al. 2021)](https://www.nature.com/articles/s41586-021-03666-1)
+
+### Additional readings
+1. [How algorithmic confounding in recommendation systems increases homogeneity and decreases utility. (Chaney et al. 2018)](https://dl.acm.org/doi/abs/10.1145/3240323.3240370)
+
+2. [CASCADE: Contextual Sarcasm Detection in Online Discussion Forums. (Hazarika et al. 2018)](https://arxiv.org/pdf/1805.06413.pdf)
