@@ -26,7 +26,7 @@ https://youtu.be/YlMM26BHrZI)]
 
 ### Day 5
 * Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects”
-* Lecture by Jana Lasser and David Garcia: “Ethical dimensions of CSS research” [[lecture recording](https://youtu.be/6J17CQiIRiE)] [[slides ethics](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/111_Ethics/Slides/Ethics_Slides.html)] [[readings ethics](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/05_02_ethics/111_Ethics/Ethics.html)] [[slides representation](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/112_RepresentationInDigitalTraces/Slides/index.html)] [[slides measurement issues](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/113_MeasurementIssues/Slides/index.html)]
+* Lecture by Jana Lasser and David Garcia: “Ethical dimensions of CSS research” [[lecture recording](https://youtu.be/6J17CQiIRiE)] [[slides ethics](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/111_Ethics/Slides/Ethics_Slides.html)] [[readings ethics](https://janalasser.github.io/SICSS-aachen-graz/blob/main/05_02_ethics/111_Ethics/Ethics.html)] [[slides representation](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/112_RepresentationInDigitalTraces/Slides/index.html)] [[slides measurement issues](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/113_MeasurementIssues/Slides/index.html)]
 * Project idea generation & group formation
 * Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data”
 
