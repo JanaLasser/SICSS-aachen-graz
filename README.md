@@ -22,7 +22,7 @@ https://youtu.be/YlMM26BHrZI)]
 ### Day 4
 * Lecture by Ivan Smirnov: “How to write a (good!) CSS paper”
 * Group activity & discussion on how to write a good CSS paper
-* Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts” [[slides](https://janalasser.github.io/SICSS-aachen-graz/04_01_visualization/slides/index.html#1)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise.ipynb)] [[plotting code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_slides.ipynb)]
+* Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts” [[slides](https://janalasser.github.io/SICSS-aachen-graz/04_01_visualization/slides/index.html#1)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise.ipynb)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise_solution.ipynb)] [[plotting code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_slides.ipynb)]
 
 ### Day 5
 * Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects”
