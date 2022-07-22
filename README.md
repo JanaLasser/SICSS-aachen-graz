@@ -24,9 +24,9 @@ https://youtu.be/YlMM26BHrZI)]
 * Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts” [[slides](https://janalasser.github.io/SICSS-aachen-graz/04_01_visualization/slides/index.html#1)] [[lecture recording](https://youtu.be/mDq0jh6VZbc)] [[exercise introduction](https://youtu.be/U_7fevTbW_4)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise.ipynb)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise_solution.ipynb)] [[plotting code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_slides.ipynb)]
 
 ### Day 5
-* Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects”
+* Lecture by Ivan Smirnov: “Potential pitfalls and problems for awesome CSS projects” [[lecture recording](https://youtu.be/5J28UoCxWms)]
 * Lecture by Jana Lasser and David Garcia: “Ethical dimensions of CSS research” [[lecture recording](https://youtu.be/6J17CQiIRiE)] [[slides ethics](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/111_Ethics/Slides/Ethics_Slides.html)] [[readings ethics](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/111_Ethics/Ethics.html)] [[slides representation](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/112_RepresentationInDigitalTraces/Slides/index.html)] [[slides measurement issues](https://janalasser.github.io/SICSS-aachen-graz/05_02_ethics/113_MeasurementIssues/Slides/index.html)]
-* Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data” [[exercise](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6a-labs-code-academic-python.md)]
+* Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data” [[lecture recording](https://youtu.be/EhZMNM-dyvk)] [[exercise](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6a-labs-code-academic-python.md)]
 
 ### Day 6
 
