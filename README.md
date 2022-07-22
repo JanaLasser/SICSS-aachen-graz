@@ -20,7 +20,7 @@ https://youtu.be/YlMM26BHrZI)]
 * Guest lecture by Markus Strohmaier “Introduction to networks in CSS” [[slides](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/introduction_to_networks_in_CSS.pdf)] [[lecture recording](https://youtu.be/GR-OO-BYzs8)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise.ipynb)] [[exercise introduction recording](https://youtu.be/kEKpS0EpEs8)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/03_02_networks/exercise/networks_exercise_solution.ipynb)]
 
 ### Day 4
-* Lecture by Ivan Smirnov: “How to write a (good!) CSS paper” [[lecture recording part 1](https://youtu.be/f1GV2RHb6dc)] [[lecture recording part 2](https://youtu.be/o60hUOuAJE4)]
+* Lecture by Ivan Smirnov: “How to write a (good!) CSS paper” [[slides](https://docs.google.com/presentation/d/1FcOMd5KaERA33_VEUnM0eqtwSWQLeQbLyHmUMwDPNtw/edit)] [[lecture recording part 1](https://youtu.be/f1GV2RHb6dc)] [[lecture recording part 2](https://youtu.be/o60hUOuAJE4)]
 * Lecture by Jana Lasser: “Visualize your data: DOs and DON’Ts” [[slides](https://janalasser.github.io/SICSS-aachen-graz/04_01_visualization/slides/index.html#1)] [[lecture recording](https://youtu.be/mDq0jh6VZbc)] [[exercise introduction](https://youtu.be/U_7fevTbW_4)] [[exercise](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise.ipynb)] [[exercise solution](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_exercise_solution.ipynb)] [[plotting code snippets](https://github.com/JanaLasser/SICSS-aachen-graz/blob/main/04_01_visualization/exercise/visualization_slides.ipynb)]
 
 ### Day 5
