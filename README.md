@@ -29,6 +29,7 @@ https://youtu.be/YlMM26BHrZI)]
 * Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data” [[lecture recording](https://youtu.be/EhZMNM-dyvk)] [[exercise](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6a-labs-code-academic-python.md)]
 
 ### Day 6
+* Lecture by Chris "New Platforms for Studying Social Media & Polarization" [[lecture recording](https://youtu.be/r1MDoVXkIBQ)]
 
 ### Day 7
 
