@@ -29,9 +29,10 @@ https://youtu.be/YlMM26BHrZI)]
 * Guest lecture by Suhem Parack: “Introduction to using the Twitter API to collect insane amounts of data” [[lecture recording](https://youtu.be/EhZMNM-dyvk)] [[exercise](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6a-labs-code-academic-python.md)]
 
 ### Day 6
-* Lecture by Chris "New Platforms for Studying Social Media & Polarization" [[lecture recording](https://youtu.be/r1MDoVXkIBQ)]
+* Lecture by Chris Bail "New Platforms for Studying Social Media & Polarization" [[lecture recording](https://youtu.be/r1MDoVXkIBQ)]
 
 ### Day 7
+* Lecture by Roberta Sinatra "Quantifying the dynamics of impact in science and art" [[lecture recording](https://youtu.be/u_ZW_pvZY08)]
 
 ### Day 8
 * Lecture by Alina Arseniev-Koehler "Integrating Topic Modeling and Word Embedding to Characterize Violent Deaths" [[materials](https://github.com/arsena-k/discourse_atoms)], [[reading 1](https://www.pnas.org/doi/10.1073/pnas.2108801119)], [[reading 2](https://pubmed.ncbi.nlm.nih.gov/33984244/)].
