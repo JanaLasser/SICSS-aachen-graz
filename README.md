@@ -37,3 +37,7 @@ https://youtu.be/YlMM26BHrZI)]
 ### Day 8
 * Lecture by Alina Arseniev-Koehler "Integrating Topic Modeling and Word Embedding to Characterize Violent Deaths" [[lecture recording](https://youtu.be/00OJj0Ny2XQ)] [[materials](https://github.com/arsena-k/discourse_atoms)], [[reading 1](https://www.pnas.org/doi/10.1073/pnas.2108801119)], [[reading 2](https://pubmed.ncbi.nlm.nih.gov/33984244/)].
 
+## Publicly accessible student projects
+* [Is sentiment in the news becoming more negative over time?](https://github.com/caiocmello/news-mood) by [Caio Mello](https://twitter.com/caiocmello), [Elçin Istif Inci](https://www.linkedin.com/in/elcin-istifinci/) and [Nick Lewis](https://twitter.com/NickLewisLSE).
+* [US abortion policy on Twitter](https://github.com/faschmar/SICSS-2022-US_abortion_policy_on_twitter/) by Martin Faschingbaumer, Anna Pavlova, Nikita Olefir and [Muhammad Zahidul Islam Miaji](https://twitter.com/Miaji_Zahidul).
+
